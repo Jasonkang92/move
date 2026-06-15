@@ -75,10 +75,15 @@ export const ContactUs = () => {
             </div>
             <div>
               <span className="block text-[11px] font-bold text-slate-400 uppercase tracking-wider">Telephone Enquiries</span>
-              <p className="text-sm font-bold text-slate-800 leading-relaxed mt-1 font-mono">
-                {NGO_DETAILS.phone}
-              </p>
-              <span className="block text-[10px] text-slate-400">Monday - Friday • 9.00am - 5.00pm (GMT+8)</span>
+              <div className="mt-2 space-y-2">
+                {NGO_DETAILS.contacts.map((contact, idx) => (
+                  <div key={idx}>
+                    <p className="text-xs font-semibold text-slate-700">{contact.name}</p>
+                    <p className="text-sm font-bold text-slate-800 font-mono">{contact.phone}</p>
+                  </div>
+                ))}
+              </div>
+              <span className="block text-[10px] text-slate-400 mt-2">Available from Jun. 10th</span>
             </div>
           </div>
 

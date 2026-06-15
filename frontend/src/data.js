@@ -2,17 +2,22 @@
 
 export const NGO_DETAILS = {
   name: "MOVE",
-  fullName: "Pertubuhan Sukarelawan Harapan Malaysia",
-  foundedYear: 2015,
+  fullName: "Malaysian Organization of Voluntary Exchange",
+  foundedYear: 2005,
   regNo: "PPM-023-14-12112015",
-  address: "Level 3, Bangunan Sukarelawan, Jalan Sultan Hishamuddin, 50050 Kuala Lumpur, Malaysia",
-  phone: "+60 3-2274 9088",
-  email: "hello@move-voluntary.org",
+  address: "2, Jalan 1/45A, Batu Housing, Batu 5, Jalan Ipoh, 51200 Kuala Lumpur, Wilayah Persekutuan",
+  phone: "+6016-3587165",
+  email: "my_move05@yahoo.com",
   socials: {
     facebook: "https://facebook.com/movevoluntary",
     instagram: "https://instagram.com/move_voluntary",
     linkedin: "https://linkedin.com/company/move-volunteer"
-  }
+  },
+  contacts: [
+    { name: "Sivasangari Ramasamy (Ms.), Founding President", phone: "+6016-3587165" },
+    { name: "Ruji (Ms.)", phone: "+6013-889 9374" },
+    { name: "Faiz (Mr.)", phone: "+6011-3717 7568" }
+  ]
 };
 
 export const PROJECTS_DATA = [
@@ -166,6 +171,6 @@ export const FAQS_DATA = [
 },
 
 {
-  q: "What does 'Pertubuhan Sukarelawan Harapan Malaysia' mean?",
-  a: "It is our official registered Malaysian NGO name. It translates to 'Volunteers of Hope Association Malaysia', representing our faith in youth-led active development."
+  q: "What does 'MOVE' mean?",
+  a: "It stands for Malaysian Organization of Voluntary Exchange. It was founded in 2005 to promote and expand the international workcamp movement in Malaysia."
 }];

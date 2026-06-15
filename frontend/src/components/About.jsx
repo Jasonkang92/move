@@ -12,9 +12,9 @@ export const About = () => {
 
   const timelineSteps = [
   {
-    year: "2015",
+    year: "2005",
     title: "The Genesis",
-    desc: "Founded as Pertubuhan Sukarelawan Harapan Malaysia with the goal to restructure traditional gap-year volunteering models into equal-partnership co-reconstruction work."
+    desc: "Founded by several former volunteers of an international workcamp to promote and expand the international workcamp movement in Malaysia."
   },
   {
     year: "2018",
@@ -51,7 +51,7 @@ export const About = () => {
           </p>
           <div className="text-slate-600 space-y-4 text-base leading-relaxed">
             <p>
-              MOVE is structured around the philosophy that humanity progresses best when we build *with* each other, rather than *for* each other. Founded in 2015 in Kuala Lumpur, Malaysia, we are a passionate network of social planners, environmental biologists, language enthusiasts, and community builders.
+              MOVE is structured around the philosophy that humanity progresses best when we build *with* each other, rather than *for* each other. Founded in 2005 in Kuala Lumpur, Malaysia, we are a passionate network of social planners, environmental biologists, language enthusiasts, and community builders.
             </p>
             <p>
               We provide formal, accredited international voluntary exchanges in Malaysia and across Southeast Asia. Through co-creation, we align underutilized youth energy during breaks to accelerate clean energy grids, educational materials, and marine conservation.
