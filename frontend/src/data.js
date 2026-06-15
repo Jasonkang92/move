@@ -113,30 +113,6 @@ export const PROJECTS_DATA = [
 }];
 
 
-export const TESTIMONIALS_DATA = [
-{
-  name: "Shazwan bin Halim",
-  age: 24,
-  role: "Voluntary Lead in Semporna Project",
-  text: "Co-creating the reef propagation program in Semporna was truly empowering. MOVE doesn't just deposit volunteers; we listen to the Bajau residents, share meals, and build together as equals. It taught me true empathy and sustainable leadership.",
-  project: "Borneo Marine Protection & Reef Seeding"
-},
-{
-  name: "Elena Rostova",
-  age: 26,
-  role: "International Volunteer (Russia)",
-  text: "PERTUBUHAN SUKARELAWAN HARAPAN MALAYSIA makes global exchange feel humble and incredibly effective. I learned practical wood building from Perak's Orang Asli elders and was able to share digital arts with local students. Highly structured yet deeply personal.",
-  project: "Changkat Orang Asli Community Co-Creation"
-},
-{
-  name: "Encik Ramlan",
-  age: 48,
-  role: "Community Partner & Village Council President",
-  text: "Other NGOs come and go, but MOVE stays, co-creates, and ensures local people are driving the programs. The educational study huts they built with us are fully managed by our youth now. That is real development.",
-  project: "Changkat Orang Asli Community Co-Creation"
-}];
-
-
 export const STATISTICS_DATA = [
 { value: "10+", label: "Years of Active Service" },
 { value: "4,200+", label: "Youth Volunteers mobilized" },

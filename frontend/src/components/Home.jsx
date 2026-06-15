@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'motion/react';
-import { Heart, Users, Globe, ArrowRight, Quote, ShieldCheck, Sparkles, MapPin } from 'lucide-react';
-import { PROJECTS_DATA, TESTIMONIALS_DATA, CORE_VALUES, NGO_DETAILS } from '../data';
+import { Heart, Users, Globe, ArrowRight, ShieldCheck, Sparkles, MapPin } from 'lucide-react';
+import { PROJECTS_DATA, CORE_VALUES, NGO_DETAILS } from '../data';
 import { useAppState } from '../context/StateContext';
 
 
@@ -11,7 +11,6 @@ import { useAppState } from '../context/StateContext';
 
 export const Home = ({ onNavigate, onSelectProject }) => {
   const { applications } = useAppState();
-  const [activeTestimonial, setActiveTestimonial] = useState(0);
 
   // Spotlight first 3 projects
   const spotlightProjects = PROJECTS_DATA.slice(0, 3);
@@ -224,69 +223,7 @@ export const Home = ({ onNavigate, onSelectProject }) => {
         </div>
       </section>
 
-      {/* 5. Volunteer Testimonials Slider */}
-      <section className="bg-slate-50 py-20 px-6 rounded-[2.5rem] max-w-7xl mx-auto overflow-hidden relative">
-        <div className="absolute bottom-0 right-0 p-8 opacity-10 font-bold text-7xl select-none font-mono text-emerald-950">
-          MOVE SUKARELAWAN
-        </div>
 
-        <div className="max-w-4xl mx-auto text-center space-y-12">
-          <div className="space-y-4">
-            <span className="text-xs font-semibold text-emerald-600 uppercase tracking-widest block">In Spoken Words</span>
-            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 font-sans tracking-tight">
-              Testimonials from the Collective
-            </h2>
-          </div>
-
-          <div className="relative min-h-[220px] flex items-center justify-center">
-            {TESTIMONIALS_DATA.map((t, idx) =>
-            <motion.div
-              key={idx}
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{
-                opacity: activeTestimonial === idx ? 1 : 0,
-                scale: activeTestimonial === idx ? 1 : 0.95,
-                display: activeTestimonial === idx ? 'block' : 'none'
-              }}
-              transition={{ duration: 0.3 }}
-              className="space-y-6">
-              
-                <div className="flex justify-center">
-                  <div className="w-10 h-10 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-700">
-                    <Quote className="w-5 h-5 fill-emerald-700" />
-                  </div>
-                </div>
-                <blockquote className="text-lg md:text-xl text-slate-700 italic leading-relaxed max-w-2xl mx-auto">
-                  "{t.text}"
-                </blockquote>
-                <div>
-                  <h4 className="font-bold text-slate-900 text-md">{t.name}, {t.age}</h4>
-                  <p className="text-xs font-semibold text-slate-400 tracking-wider uppercase mt-1">
-                    {t.role} — <span className="text-emerald-700">{t.project}</span>
-                  </p>
-                </div>
-              </motion.div>
-            )}
-          </div>
-
-          {/* Testimonial slider indicators */}
-          <div className="flex justify-center gap-3">
-            {TESTIMONIALS_DATA.map((_, idx) =>
-            <button
-              key={idx}
-              id={`testimonial-dot-${idx}`}
-              onClick={() => setActiveTestimonial(idx)}
-              className={`w-3.5 h-3.5 rounded-full transition duration-300 border cursor-pointer ${
-              activeTestimonial === idx ?
-              'bg-emerald-600 border-emerald-600 scale-110' :
-              'bg-white border-slate-300 hover:border-slate-400'}`
-              }
-              aria-label={`Go to testimonial ${idx + 1}`}>
-            </button>
-            )}
-          </div>
-        </div>
-      </section>
 
       {/* 6. Co-creation Action Banner */}
       <section className="max-w-7xl mx-auto px-6">
