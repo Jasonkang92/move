@@ -164,10 +164,7 @@ export const FAQS_DATA = [
   q: "Is there a program fee? why?",
   a: "Yes, our programs operate on a strict self-funded model to ensure 100% of donor contributions go directly to building school materials, solar cells, or plant propagation. Program fees cover your lodging, local rural home-stay meals, project insurance, and basic building materials."
 },
-{
-  q: "How does the donation portal work?",
-  a: "Donations are processed via secure simulation channels in this portal. 100% of public funds are transparently assigned to specific community materials (like sand filters, paint, books, solar panels) which you can track in real-time."
-},
+
 {
   q: "What does 'Pertubuhan Sukarelawan Harapan Malaysia' mean?",
   a: "It is our official registered Malaysian NGO name. It translates to 'Volunteers of Hope Association Malaysia', representing our faith in youth-led active development."

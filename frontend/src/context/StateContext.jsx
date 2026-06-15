@@ -46,41 +46,6 @@ const PRELOADED_APPLICATIONS = [
 }];
 
 
-const PRELOADED_DONATIONS = [
-{
-  id: "don_1",
-  donorName: "Tan Sri Lee Kok Wah",
-  email: "kw.lee@heritagecorp.com.my",
-  amount: 15000,
-  isAnonymous: false,
-  frequency: "one-time",
-  targetProject: "Changkat Orang Asli Community Co-Creation",
-  date: "2026-05-29T03:40:00Z",
-  paymentMethod: "fpx"
-},
-{
-  id: "don_2",
-  donorName: "Liyana Razak",
-  email: "liyana.r@designarch.com",
-  amount: 250,
-  isAnonymous: false,
-  frequency: "monthly",
-  targetProject: "Borneo Marine Protection & Reef Seeding",
-  date: "2026-05-30T11:20:00Z",
-  paymentMethod: "card"
-},
-{
-  id: "don_3",
-  donorName: "Anonymous Supporter",
-  email: "secret@donor.org",
-  amount: 1000,
-  isAnonymous: true,
-  frequency: "one-time",
-  targetProject: "General Fund (Any Program Needed)",
-  date: "2026-05-31T20:15:00Z",
-  paymentMethod: "paypal"
-}];
-
 
 const PRELOADED_MESSAGES = [
 {
@@ -99,11 +64,6 @@ export const AppStateProvider = ({ children }) => {
     return saved ? JSON.parse(saved) : PRELOADED_APPLICATIONS;
   });
 
-  const [donations, setDonations] = useState(() => {
-    const saved = localStorage.getItem('move_donations');
-    return saved ? JSON.parse(saved) : PRELOADED_DONATIONS;
-  });
-
   const [messages, setMessages] = useState(() => {
     const saved = localStorage.getItem('move_messages');
     return saved ? JSON.parse(saved) : PRELOADED_MESSAGES;
@@ -112,10 +72,6 @@ export const AppStateProvider = ({ children }) => {
   useEffect(() => {
     localStorage.setItem('move_applications', JSON.stringify(applications));
   }, [applications]);
-
-  useEffect(() => {
-    localStorage.setItem('move_donations', JSON.stringify(donations));
-  }, [donations]);
 
   useEffect(() => {
     localStorage.setItem('move_messages', JSON.stringify(messages));
@@ -131,15 +87,6 @@ export const AppStateProvider = ({ children }) => {
     setApplications((prev) => [newApp, ...prev]);
   };
 
-  const addDonation = (donation) => {
-    const newDonation = {
-      ...donation,
-      id: `don_${Date.now()}`,
-      date: new Date().toISOString()
-    };
-    setDonations((prev) => [newDonation, ...prev]);
-  };
-
   const addMessage = (msg) => {
     const newMsg = {
       ...msg,
@@ -149,17 +96,12 @@ export const AppStateProvider = ({ children }) => {
     setMessages((prev) => [newMsg, ...prev]);
   };
 
-  const totalDonationAmount = donations.reduce((sum, item) => sum + item.amount, 0);
-
   return (
     <AppStateContext.Provider value={{
       applications,
-      donations,
       messages,
       addApplication,
-      addDonation,
-      addMessage,
-      totalDonationAmount
+      addMessage
     }}>
       {children}
     </AppStateContext.Provider>);

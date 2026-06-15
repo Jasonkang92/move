@@ -10,7 +10,7 @@ import { useAppState } from '../context/StateContext';
 
 
 export const Home = ({ onNavigate, onSelectProject }) => {
-  const { totalDonationAmount, applications } = useAppState();
+  const { applications } = useAppState();
   const [activeTestimonial, setActiveTestimonial] = useState(0);
 
   // Spotlight first 3 projects
@@ -59,14 +59,6 @@ export const Home = ({ onNavigate, onSelectProject }) => {
                 <span>Join as a Volunteer</span>
                 <ArrowRight className="w-4.5 h-4.5" />
               </button>
-              <button
-                id="hero-donate-btn"
-                onClick={() => onNavigate('donate')}
-                className="inline-flex items-center gap-2 bg-white text-slate-800 font-medium px-7 py-3.5 rounded-full border border-slate-200 hover:bg-slate-50 transition duration-300 shadow-sm cursor-pointer">
-                
-                <span>Support Our Projects</span>
-                <Heart className="w-4.5 h-4.5 text-rose-500 fill-rose-500" />
-              </button>
             </div>
 
             {/* Quick trust metrics */}
@@ -100,11 +92,7 @@ export const Home = ({ onNavigate, onSelectProject }) => {
               </div>
 
               {/* Dynamic Overlay card indicating current session's live data feedback */}
-              <div className="mt-4 p-4 bg-emerald-50/50 border border-emerald-100 rounded-xl grid grid-cols-2 gap-4 divide-x divide-emerald-100/80 text-center">
-                <div>
-                  <span className="block text-[11px] font-semibold uppercase text-slate-500 tracking-wider">Live Raised Goal</span>
-                  <span className="text-lg font-bold text-emerald-800">{formatCurrency(850000 + totalDonationAmount)}</span>
-                </div>
+              <div className="mt-4 p-4 bg-emerald-50/50 border border-emerald-100 rounded-xl text-center">
                 <div>
                   <span className="block text-[11px] font-semibold uppercase text-slate-500 tracking-wider">Recruits Enqueued</span>
                   <span className="text-lg font-bold text-emerald-800">{applications.length} Active Applicants</span>
@@ -137,12 +125,7 @@ export const Home = ({ onNavigate, onSelectProject }) => {
               <span className="block text-3xl md:text-4xl font-sans font-extrabold text-amber-400">150k+</span>
               <span className="block text-xs md:text-sm text-emerald-200 mt-1.5">Co-creation Hours</span>
             </div>
-            <div className="pt-4 md:pt-0 col-span-2 md:col-span-1">
-              <span className="block text-3xl md:text-4xl font-sans font-extrabold text-amber-400">
-                {formatCurrency(totalDonationAmount)}
-              </span>
-              <span className="block text-xs md:text-sm text-emerald-200 mt-1.5 italic font-medium">Session Live Portal Fund</span>
-            </div>
+
           </div>
         </div>
       </section>

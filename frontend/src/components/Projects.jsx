@@ -13,7 +13,7 @@ import { PROJECTS_DATA } from '../data';
 
 export const Projects = ({
   onApplyForProject,
-  onDonateToProject,
+
   selectedProjectId,
   onClearSelectedProjectId
 }) => {
@@ -42,10 +42,7 @@ export const Projects = ({
     onApplyForProject(projectTitle);
   };
 
-  const handleDonateClick = (projectTitle) => {
-    handleCloseModal();
-    onDonateToProject(projectTitle);
-  };
+
 
   // Filter projects
   const filteredProjects = PROJECTS_DATA.filter((proj) => {
@@ -320,22 +317,13 @@ export const Projects = ({
                 </p>
               </div>
 
-              {/* Modal footer CTAs */}
-              <div className="pt-4 border-t border-slate-100 grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="pt-4 border-t border-slate-100 flex justify-center">
                 <button
                 id="modal-apply-btn"
                 onClick={() => handleApplyClick(modalProject.title)}
-                className="bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3.5 rounded-2xl text-center cursor-pointer transition shadow-md shadow-emerald-600/10 active:scale-98 text-sm">
+                className="w-full sm:w-auto px-8 bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3.5 rounded-2xl text-center cursor-pointer transition shadow-md shadow-emerald-600/10 active:scale-98 text-sm">
                 
                   Apply as Volunteer for Project
-                </button>
-                <button
-                id="modal-donate-btn"
-                onClick={() => handleDonateClick(modalProject.title)}
-                className="bg-white border border-rose-200 hover:bg-rose-50 hover:border-rose-300 text-rose-700 font-bold py-3.5 rounded-2xl text-center cursor-pointer transition text-sm flex items-center justify-center gap-1.5 shadow-sm">
-                
-                  <Smile className="w-4 h-4 fill-rose-100" />
-                  <span>Sponsor with a Donation</span>
                 </button>
               </div>
             </div>

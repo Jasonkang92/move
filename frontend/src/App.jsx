@@ -5,7 +5,6 @@ import { AppStateProvider } from './context/StateContext';
 import { Home } from './components/Home';
 import { About } from './components/About';
 import { Projects } from './components/Projects';
-import { DonationPortal } from './components/DonationPortal';
 import { VolunteerForm } from './components/VolunteerForm';
 import { ContactUs } from './components/ContactUs';
 import { NGO_DETAILS } from './data.js';
@@ -27,11 +26,7 @@ function MainApp() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  const handleDonateToProject = (projectTitle) => {
-    setPrefilledProject(projectTitle);
-    setActiveTab('donate');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
+
 
   const handleSelectProjectAndView = (projectId) => {
     setSelectedProjectId(projectId);
@@ -120,14 +115,6 @@ function MainApp() {
               
               Volunteer Form
             </button>
-            <button
-              id="desktop-nav-donate"
-              onClick={() => navigateToTab('donate')}
-              className="bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold px-5 py-2.5 rounded-xl text-xs transition tracking-wide cursor-pointer flex items-center gap-1.5 shadow-md shadow-emerald-500/10 active:scale-98">
-              
-              <Heart className="w-3.5 h-3.5 text-white fill-white" />
-              <span>Donate Now</span>
-            </button>
           </div>
 
           {/* Mobile Menu Action Hamburger */}
@@ -174,14 +161,7 @@ function MainApp() {
             )}
             </div>
 
-            <button
-            id="mob-nav-donate-now"
-            onClick={() => navigateToTab('donate')}
-            className="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold p-3.5 rounded-xl text-xs transition flex items-center justify-center gap-1.5 cursor-pointer shadow-lg">
-            
-              <Heart className="w-4 h-4 fill-white" />
-              <span>Sponsor / Donate Site</span>
-            </button>
+
           </motion.div>
         }
       </AnimatePresence>
@@ -208,18 +188,11 @@ function MainApp() {
             {activeTab === 'projects' &&
             <Projects
               onApplyForProject={handleApplyForProject}
-              onDonateToProject={handleDonateToProject}
               selectedProjectId={selectedProjectId}
               onClearSelectedProjectId={() => setSelectedProjectId(null)} />
 
             }
-            
-            {activeTab === 'donate' &&
-            <DonationPortal
-              prefilledProjectTitle={prefilledProject}
-              onClearPrefilledProject={() => setPrefilledProject(null)} />
 
-            }
             
             {activeTab === 'volunteer' &&
             <VolunteerForm
@@ -268,7 +241,6 @@ function MainApp() {
               { id: 'about', label: 'Organization Biography' },
               { id: 'projects', label: 'Active Projects' },
               { id: 'volunteer', label: 'Apply to Volunteer' },
-              { id: 'donate', label: 'Sponsor Portal' },
               { id: 'contact', label: 'Partnership Channels' }].
               map((link) =>
               <button
