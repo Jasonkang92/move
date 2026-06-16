@@ -298,21 +298,17 @@ function About() {
             <h4 className="text-white/80 font-bold uppercase tracking-widest text-sm mb-10">
               Our Global Partners
             </h4>
-            <div className="flex flex-col md:flex-row justify-center items-center gap-12 md:gap-24 opacity-90">
+            <div className="flex flex-col md:flex-row justify-center items-center gap-12 md:gap-20 opacity-95">
               <div className="flex flex-col items-center">
-                <span className="text-3xl md:text-5xl font-black text-white tracking-tighter mb-2">
-                  NVDA
-                </span>
-                <span className="text-xs text-secondary-light font-bold">
+                <img src="/nvda-logo.png" alt="NVDA Logo" className="h-16 md:h-24 object-contain bg-white p-3 md:p-4 rounded-2xl mb-4 shadow-xl" />
+                <span className="text-xs text-secondary-light font-bold text-center max-w-[200px]">
                   Network for Voluntary Development in Asia
                 </span>
               </div>
-              <div className="hidden md:block w-px h-16 bg-white/20"></div>
+              <div className="hidden md:block w-px h-24 bg-white/20"></div>
               <div className="flex flex-col items-center">
-                <span className="text-3xl md:text-5xl font-black text-white tracking-tighter mb-2">
-                  CCIVS
-                </span>
-                <span className="text-xs text-secondary-light font-bold">
+                <img src="/ccivs-logo.png" alt="CCIVS Logo" className="h-16 md:h-24 object-contain bg-white p-3 md:p-4 rounded-2xl mb-4 shadow-xl" />
+                <span className="text-xs text-secondary-light font-bold text-center max-w-[200px]">
                   Coordinating Committee for Intl Voluntary Service
                 </span>
               </div>

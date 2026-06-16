@@ -7,7 +7,7 @@ export const NGO_DETAILS = {
   regNo: "PPM-023-14-12112015",
   address: "2, Jalan 1/45A, Batu Housing, Batu 5, Jalan Ipoh, 51200 Kuala Lumpur, Wilayah Persekutuan",
   phone: "+6016-3587165",
-  email: "my_move05@yahoo.com",
+  email: "info.mymove05@gmail.com",
   socials: {
     facebook: "https://facebook.com/movevoluntary",
     instagram: "https://instagram.com/move_voluntary",
