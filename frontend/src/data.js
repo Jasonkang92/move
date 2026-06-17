@@ -132,18 +132,18 @@ export const CORE_VALUES = [
 },
 {
   title: "Inclusivity & Hope",
-  description: "As Harapan Malaysia, we believe hope is active. We bridge ethnic, cultural, and national divides to generate lasting global synergy."
+  description: "As MOVE Malaysia, we believe hope is active. We build meaningful connections across ethnic, cultural, and national lines to generate lasting global synergy."
 }];
 
 
 export const FAQS_DATA = [
 {
   q: "Who can apply as a volunteer?",
-  a: "Anyone aged 18 to 35 with a passion for learning, humbleness, and structured teamwork. For home projects, conversational Malay is helpful but not mandatory. For international projects, English fluency is preferred."
+  a: "Anyone aged 18 and above with a passion for learning, humbleness, and structured teamwork. For home projects, conversational Malay is helpful but not mandatory. For international projects, English fluency is preferred."
 },
 {
   q: "Is there a program fee? why?",
-  a: "Yes, our programs operate on a strict self-funded model to ensure 100% of donor contributions go directly to building school materials, solar cells, or plant propagation. Program fees cover your lodging, local rural home-stay meals, project insurance, and basic building materials."
+  a: "Yes, our programs operate on a strict self-funded model to ensure 100% of donor contributions go directly to the projects. Program fees cover your lodging, meals, project insurance, materials and other essential project resources."
 },
 
 {
